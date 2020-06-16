@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<section class="produits">
+
+    {% for produit in produits %}
+     <article>
+            <h2>{{ produit.title }}</h2>
+            <div class="metadata">Ecrit le  15/09/2020 à 15h:09 dans la categorie  </div>
+            <div class="content">
+                <img src="http://placehold.it/350x150" alt="">
+                <p>Achetez et revendez votre outillage d’occasion en toute sécurité. 
+                Complétez vos revenus de fin de mois . Ici vous trouverez du matériel professionnel,
+                des outils, des machines dans le domaines du bricolage, industriel et agricole. 
+                Accessible aux particuliers et aux professionnels. 
+                Créez un compte gratuitement et enchérissez pour remporter un lot. 
+                Vous pouvez être livré ou récupérer le lot en mains propres.</p>
+                <a href="{{ path('produit_show', {'id':produit.id}) }}" class="btn btn-primary"> Lire la suite </a>
+            </div>
+        </article>
+    {% endfor %}
+
+
+{% endblock %}

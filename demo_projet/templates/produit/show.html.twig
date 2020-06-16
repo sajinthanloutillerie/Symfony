@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<section class="produits">
+
+     <article>
+            <h2>{{produit.title}}</h2>
+            <div class="metadata">Ecrit le  15/09/2020 à 15h:09 dans la categorie  </div>
+            <div class="content">
+                <img src="http://placehold.it/350x150" alt="">
+                {{produit.content | raw}}
+            </div>
+        </article>
+
+
+{% endblock %}
